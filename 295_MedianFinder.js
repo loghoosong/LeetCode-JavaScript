@@ -101,3 +101,15 @@ class Heap {
         return ret;
     }
 }
+
+
+let h = new Heap();
+
+h.push(5);
+h.push(1);
+h.push(8);
+h.push(9);
+h.push(4);
+h.push(3);
+h.push(6);
+console.log(h.list)
