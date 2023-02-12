@@ -3,13 +3,11 @@
  * @return {number}
  */
 var minMoves = function (nums) {
-    if (nums.length == 1) return 0;
-    let max = -Infinity;
-    let min = Infinity;
-    nums.forEach(num => {
-        max = max > num ? max : num;
-        min = min < num ? min : num;
-    })
-    let sum = nums.reduce((sum, num) => sum + max - num, 0);
-    return (max - min) * nums.length - sum;
+    let sum = 0,
+        min = Infinity;
+    nums.map(num => {
+        sum += num;
+        min = Math.min(min, num);
+    });
+    return sum - min * nums.length;
 };
