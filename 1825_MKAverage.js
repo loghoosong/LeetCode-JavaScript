@@ -129,7 +129,7 @@ class Heap {
         const len = h.length;
         while ((idx << 1) < len) {
             let child = idx << 1;
-            if (child + 1 <= len && this.compare(h[child + 1], h[child])) child++;
+            if (child + 1 < len && this.compare(h[child + 1], h[child])) child++;
             if (!this.compare(h[child], h[idx])) break;
             this.swap(idx, child);
             idx = child;
