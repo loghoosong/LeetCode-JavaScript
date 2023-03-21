@@ -14,3 +14,4 @@ var totalHammingDistance = function (nums) {
     }
     return ans;
 };
+Number
